@@ -9,7 +9,7 @@ class _abstractattribute(Generic[T_]):
     def __init__(self, type_: type[T_]):
         self.type_ = type_
 
-    def __get__(self, *_) -> str:
+    def __get__(self, *_) -> T_:
         raise NotImplementedError()
 
     def __set__(self, *_) -> None:
